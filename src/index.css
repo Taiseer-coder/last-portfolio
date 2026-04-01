@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+html{
+@apply  scroll-smooth;
+}
+
+body{
+  @apply box-border bg-mauve-100  text-pink-900   ;
+}
