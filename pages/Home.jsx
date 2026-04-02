@@ -13,14 +13,15 @@ function Home ()
     return(
         <>
 
-        <NameAndLogo/>
-{/* 
-        <Navbar/>
+        {/* <NameAndLogo/> */}
         <Hero/>
-        <Bot/>
-        <About/>
-        <Skills/>
+
+{/* 
         <Projects/>
+        <Skills/>
+        <About/>
+        <Navbar/>
+        <Bot/>
         <Contact/>
         <Footer/> */}
 
