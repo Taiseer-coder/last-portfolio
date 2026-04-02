@@ -5,5 +5,5 @@ html{
 }
 
 body{
-  @apply box-border bg-mauve-100  text-pink-900   ;
+  @apply box-border bg-mauve-200  text-gray-800   ;
 }
