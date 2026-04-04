@@ -42,7 +42,7 @@ const Navbar = () => {
            
           </h2>
           
-          <button className="bg-purple-800 text-white py-2 px-5 rounded-lg font-medium hover:bg-purple-900 transition duration-300">
+          <button className="bg-gray-700 text-gary-900 py-2 px-5 rounded-lg font-medium hover:bg-purple-900 transition duration-300">
              ابدأ موقعك
           </button>
         </div>
