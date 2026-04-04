@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
-import NameAndLogo from "../components/navbar/Name&Logo";
 import Background from "../particle/Background";
+import Navbar from "../components/Navbar";
 
 function MainLayout() {
     // console.log("MainLayout rendered");
@@ -11,7 +11,7 @@ function MainLayout() {
       <Background />
 
       {/* Navbar */}
-      <NameAndLogo/>
+      <Navbar/>
 
       {/* الصفحات */}
       <div className="relative z-10 pt-24">

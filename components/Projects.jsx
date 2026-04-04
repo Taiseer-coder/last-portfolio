@@ -1,98 +1,56 @@
-import React from 'react'
-import 'swiper/css'
-import image from '../public/images/image4.png'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay, Pagination } from 'swiper/modules'
-import "swiper/css/pagination"
-
 const Projects = () => {
   const projects = [
-    { 
-      img :image ,
-      name:'Personal project ',
-      github_link:'https://github.com/Taiseer-coder/my-portfolio',
-      live_link:'https://taiseer-1-portfolio.netlify.app/'
+    {
+      title: 'Portfolio 1',
+      desc: 'موقعي الشخصي الأول لعرض المهارات والتصميم بشكل بسيط ونظيف.',
+      link: 'https://taiseer-1-portfolio.netlify.app'
     },
-    { 
-      img :image ,
-      name:' Advance Personal project ',
-      github_link:'https://github.com/Taiseer-coder/advance-portfolio',
-      live_link:'https://taiseer-2-portfolio.netlify.app/'
-    },
-    { 
-      img :image ,
-      name:' Personal project ',
-      github_link:'https://github.com/Taiseer-coder/my-portfolio',
-      live_link:'https://taiseer-1-portfolio.netlify.app/'
-    },
-    
-    { 
-      img :image ,
-      name:' Advance Personal project ',
-      github_link:'https://github.com/Taiseer-coder/advance-portfolio',
-      live_link:'https://taiseer-2-portfolio.netlify.app/'
-    },
-  ]
+    {
+      title: 'Portfolio 2',
+      desc: 'نسخة مطورة من البورتفوليو مع تحسين التصميم وتجربة المستخدم.',
+      link: 'https://taiseer-2-portfolio.netlify.app'
+    }
+  ];
+
   return (
-    <section id='projects' className='py-10 px-3  text-white'>
-      <div className='text-center mt-8'>
-        <h3 className='text-4xl font-semibold'>
-          My <span className='text-cyan-600'> Projects</span>
-        </h3>
-        <p className='text-gray-600 mt-3 text-lg'> My Awesome Works </p>
-      </div>
-      <br/>
-      <div className='flex max-w-6xl px-5 mx-auto items-center relative '>
-        <div className=' px-4 lg:w-2/3 w-full'>
+    <section id="projects" className="py-20 px-6">
+      <div className="max-w-5xl mx-auto space-y-12">
 
-        <Swiper 
-          className="mySwiper"
-        slidesPerView={1} 
-        spaceBetween={20} 
-        breakpoints={{
-           
-            768: {
-              slidesPerView: 2, // تابلت
-            },
-            
-        }}
-        loop={true}
-        autoplay={{ delay: 3000 }} 
-        pagination={{ clickable: true }}
-        modules={[Pagination,Autoplay]}
-        >
-        {
-          projects.map((project,index) => (
-            <SwiperSlide key={index}>
-            <div   className=' h-fit w-full p-4  bg-slate-700 rounded-xl'>
-              <img  src={project.img} alt='' className='rounded-lg'/>
-              <h3 className=' text-xl my-4'>{project.name}</h3>
-              <div className=' flex gap-3'>
-                <a href={project.github_link} target='_blank' rel='noopener noreferrer' className='text-cyan-600 bg-gray-800 px-2 py-1 inline-block' >
-                  Github
-                </a>
-                <a href={project.live_link} target='_blank' rel='noopener noreferrer' className='text-cyan-600 bg-gray-800 px-2 py-1 inline-block' >
-                  Live Demo 
-                </a>
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900">
+          مشاريعي
+        </h2>
 
-              </div>
+        <div className="grid md:grid-cols-2 gap-8">
+          {projects.map((project, i) => (
+            <div
+              key={i}
+              className="group border border-gray-200 rounded-2xl p-6 space-y-4 hover:shadow-xl transition duration-300"
+            >
+              
+              <h3 className="text-xl font-semibold text-gray-900">
+                {project.title}
+              </h3>
+
+              <p className="text-gray-600 text-sm leading-relaxed">
+                {project.desc}
+              </p>
+
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block text-sm font-medium text-gray-900 border border-gray-300 px-4 py-2 rounded-lg hover:bg-gray-900 hover:text-white transition"
+              >
+                عرض المشروع
+              </a>
+
             </div>
-          </SwiperSlide>
-          
-
-        ))}
-        </Swiper>
-
-        </div>
-        <div className=' lg:block hidden'>
-          <img src={image} alt=''/>
+          ))}
         </div>
 
       </div>
+    </section>
+  );
+};
 
-
-        
-    </section>  )
-}
-
-export default Projects
+export default Projects;

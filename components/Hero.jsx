@@ -1,85 +1,81 @@
-// import React from 'react'
-// import image from '../public/images/image6.png'
-// import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa'
-// const Hero = () => {
-//   return (
-//     <section 
-//     id="home"
-//     className=' min-h-screen flex py-10 md:flex-row flex-col items-center '
-//     >
-//       <div className='flex-1 flex items-center justify-center h-full '>
-//         <img src={image} alt=''  className='md:w-11/12   h-full object-cover'/>
-//       </div>
-//       <div className='flex-1'>
-//         <div className='md:text-left text-center'>
-//           <h1 className='md:text-5xl text-2xl md:leading-normal leading-10 font-bold text-white'>
-//             <span className='text-cyan-600 md:text-6xl text-5xl'>
-//               Hello!
-//               <br/>
-//             </span>
-//             My name is <span>Taiseer Al-Bahri</span>
-//           </h1>
-//           <h4 className='md:text-2xl text-lg md:leading-normal leading-10 mt-4 font-bold text-gray-600'>
-//             React Developer
-//           </h4>
-//           <button className='btn-primery mt-8'>
-//             Contact Me
-//           </button>
-
-//           <div className=' mt-8 text-3xl flex  items-center md:justify-start justify-center gap-5' >
-            
-//             <FaFacebook  className='text-gray-600 hover:text-white'/>
-//            <FaWhatsapp className='text-gray-600 hover:text-white'/>
-//            <FaInstagram className='text-gray-600 hover:text-white'/>
-//           </div>
-
-//         </div>
-//       </div>
-//     </section>
-//   )
-// }
-
-// export default Hero
-
-
 import React from 'react';
-import image from '../public/images/personalImage.png';
+import image from '../public/images/personalImage.jpg';
+import { FaCode, FaBriefcase, FaStar } from 'react-icons/fa';
 
 const Hero = () => {
-  return (
-    <section
+  return (  
+    <section 
       id="home"
-      className=" w-full overflow-hidden flex items-center justify-center p-30"
+      className="h-[calc(100vh-80px)] flex flex-col justify-center px-6 overflow-hidden"
     >
-      <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-6xl gap-10">
-       {/* الصورة مع الخلفية المائلة */}
-    <div className="flex-1 flex items-end justify-center relative">
-      {/* الخلفية المائلة */}
-      <div className="absolute w-[90%] h-[100%] bg-gray-200 rounded-lg rotate-0 -z-10"></div>
 
-      {/* الصورة */}
-      <img
-        src={image}
-        alt="Hero"
-        className="w-full max-w-sm rounded-lg shadow-lg relative z-10"
-      />
-    </div>
+      {/* الصورة + النص */}
+      <div className="flex flex-col md:flex-row items-center">
 
-        {/* النص على اليمين */}
-        <div className="flex-1 flex flex-col justify-center items-start text-gray-800 font-semibold">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            مرحباً،  <span className="text-purple-950">  أنا تيسير البحري </span>
-          </h1>
-          <p className="text-lg md:text-xl text-gray-900">
-            أنا مطور واجهات أمامية، أحب تصميم واجهات جذابة وسلسة وتجربة مستخدم ممتازة.
+        {/* الصورة */}
+        <div className="flex-1 flex justify-center">
+          <div className="p-[6px] rounded-full bg-gray-200  shadow-md">
+            <div className="bg-white p-4 rounded-full">
+              <img
+                src={image}
+                alt="Hero"
+                className="w-52 h-52 md:w-72 md:h-72 object-cover rounded-full"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* النص */}
+        <div className="flex-1 text-center md:text-right space-y-3 max-w-xl">
+
+          <p className="text-lg text-gray-500">
+            مرحباً 
           </p>
+
+          <h1 className="text-xl md:text-2xl font-semibold text-gray-700">
+             انا مطورة واجهات أمامية
+          </h1>
+
+          <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+            أصمم واجهات عصرية وسهلة الاستخدام، أركز على تجربة المستخدم 
+            وتفاصيل التصميم التي تصنع الفرق ✨
+          </p>
+
         </div>
       </div>
+
+      {/* الإحصائيات (تصميم جديد 🔥) */}
+      <div className="mt-6 w-full max-w-2xl mx-auto">
+
+        <div className="grid grid-cols-3 gap-4 ">
+
+          {/* عنصر */}
+          <div className="flex flex-col items-center p-4 rounded-xl border border-gray-200 hover:shadow-md transition">
+            <FaCode className=" text-lg mb-2  text-gray-700" />
+            <p className="text-xl font-bold text-gray-900">15+</p>
+            <p className="text-xs text-gray-500">مشروع</p>
+          </div>
+
+          {/* عنصر */}
+          <div className="flex flex-col items-center p-4 rounded-xl border border-gray-200 hover:shadow-md transition">
+            <FaBriefcase className="text-gray-700 text-lg mb-2" />
+            <p className="text-xl font-bold text-gray-900">2+</p>
+            <p className="text-xs text-gray-500">سنوات</p>
+          </div>
+
+          {/* عنصر */}
+          <div className="flex flex-col items-center p-4 rounded-xl border border-gray-200 hover:shadow-md transition">
+            <FaStar className="text-gray-700 text-lg mb-2" />
+            <p className="text-xl font-bold text-gray-900">10+</p>
+            <p className="text-xs text-gray-500">تقنيات</p>
+          </div>
+
+        </div>
+
+      </div>
+
     </section>
   );
 };
 
 export default Hero;
-
-
-
